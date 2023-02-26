@@ -1,0 +1,19 @@
+formatters:
+  module_func:
+    datefmt: '%m-%d %H:%M:%S'
+    format: '%(asctime)s - %(module)s - %(funcName)s - %(message)s'
+handlers:
+  file:
+    class: logging.handlers.RotatingFileHandler
+    encoding: utf8
+    filename: /home/niklas/ETM_BEV/BEVerse/logs/local_logs/log01-23-13:07.log
+    formatter: module_func
+    level: DEBUG
+    maxBytes: 10485760
+loggers:
+  timelogger:
+    handlers:
+    - file
+    level: DEBUG
+    propagate: false
+version: 1

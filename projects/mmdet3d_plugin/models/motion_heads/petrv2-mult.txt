@@ -1,0 +1,615 @@
+self.with_multi = True
+self.with_multiview = True
+cls_branch = [Linear(in_features=256, out_features=256, bias=True), LayerNorm((256,), eps=1e-05, elementwise_affine=True), ReLU(inplace=True), Linear(in_features=256, out_features=256, bias=True), LayerNorm((256,), eps=1e-05, elementwise_affine=True), ReLU(inplace=True), Linear(in_features=256, out_features=10, bias=True)]
+fc_cls = Sequential(
+  (0): Linear(in_features=256, out_features=256, bias=True)
+  (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+  (2): ReLU(inplace=True)
+  (3): Linear(in_features=256, out_features=256, bias=True)
+  (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+  (5): ReLU(inplace=True)
+  (6): Linear(in_features=256, out_features=10, bias=True)
+)
+cls_branch ModuleList(
+  (0): Sequential(
+    (0): Linear(in_features=256, out_features=256, bias=True)
+    (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (2): ReLU(inplace=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (5): ReLU(inplace=True)
+    (6): Linear(in_features=256, out_features=10, bias=True)
+  )
+  (1): Sequential(
+    (0): Linear(in_features=256, out_features=256, bias=True)
+    (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (2): ReLU(inplace=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (5): ReLU(inplace=True)
+    (6): Linear(in_features=256, out_features=10, bias=True)
+  )
+  (2): Sequential(
+    (0): Linear(in_features=256, out_features=256, bias=True)
+    (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (2): ReLU(inplace=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (5): ReLU(inplace=True)
+    (6): Linear(in_features=256, out_features=10, bias=True)
+  )
+  (3): Sequential(
+    (0): Linear(in_features=256, out_features=256, bias=True)
+    (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (2): ReLU(inplace=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (5): ReLU(inplace=True)
+    (6): Linear(in_features=256, out_features=10, bias=True)
+  )
+  (4): Sequential(
+    (0): Linear(in_features=256, out_features=256, bias=True)
+    (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (2): ReLU(inplace=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (5): ReLU(inplace=True)
+    (6): Linear(in_features=256, out_features=10, bias=True)
+  )
+  (5): Sequential(
+    (0): Linear(in_features=256, out_features=256, bias=True)
+    (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (2): ReLU(inplace=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (5): ReLU(inplace=True)
+    (6): Linear(in_features=256, out_features=10, bias=True)
+  )
+)
+reg_branches ModuleList(
+  (0): RegLayer(
+    (reg_branch): Sequential(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.0, inplace=False)
+      (3): Linear(in_features=256, out_features=256, bias=True)
+      (4): ReLU()
+      (5): Dropout(p=0.0, inplace=False)
+    )
+    (task_heads): ModuleList(
+      (0): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=1, bias=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=3, bias=True)
+      )
+      (3): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (4): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+    )
+  )
+  (1): RegLayer(
+    (reg_branch): Sequential(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.0, inplace=False)
+      (3): Linear(in_features=256, out_features=256, bias=True)
+      (4): ReLU()
+      (5): Dropout(p=0.0, inplace=False)
+    )
+    (task_heads): ModuleList(
+      (0): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=1, bias=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=3, bias=True)
+      )
+      (3): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (4): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+    )
+  )
+  (2): RegLayer(
+    (reg_branch): Sequential(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.0, inplace=False)
+      (3): Linear(in_features=256, out_features=256, bias=True)
+      (4): ReLU()
+      (5): Dropout(p=0.0, inplace=False)
+    )
+    (task_heads): ModuleList(
+      (0): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=1, bias=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=3, bias=True)
+      )
+      (3): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (4): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+    )
+  )
+  (3): RegLayer(
+    (reg_branch): Sequential(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.0, inplace=False)
+      (3): Linear(in_features=256, out_features=256, bias=True)
+      (4): ReLU()
+      (5): Dropout(p=0.0, inplace=False)
+    )
+    (task_heads): ModuleList(
+      (0): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=1, bias=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=3, bias=True)
+      )
+      (3): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (4): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+    )
+  )
+  (4): RegLayer(
+    (reg_branch): Sequential(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.0, inplace=False)
+      (3): Linear(in_features=256, out_features=256, bias=True)
+      (4): ReLU()
+      (5): Dropout(p=0.0, inplace=False)
+    )
+    (task_heads): ModuleList(
+      (0): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=1, bias=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=3, bias=True)
+      )
+      (3): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (4): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+    )
+  )
+  (5): RegLayer(
+    (reg_branch): Sequential(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.0, inplace=False)
+      (3): Linear(in_features=256, out_features=256, bias=True)
+      (4): ReLU()
+      (5): Dropout(p=0.0, inplace=False)
+    )
+    (task_heads): ModuleList(
+      (0): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=1, bias=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=3, bias=True)
+      )
+      (3): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (4): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+    )
+  )
+)
+build PETRTransformer
+NMSFreeCoder
+self.with_multi = True
+self.with_multiview = True
+cls_branch = [Linear(in_features=256, out_features=256, bias=True), LayerNorm((256,), eps=1e-05, elementwise_affine=True), ReLU(inplace=True), Linear(in_features=256, out_features=256, bias=True), LayerNorm((256,), eps=1e-05, elementwise_affine=True), ReLU(inplace=True), Linear(in_features=256, out_features=10, bias=True)]
+fc_cls = Sequential(
+  (0): Linear(in_features=256, out_features=256, bias=True)
+  (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+  (2): ReLU(inplace=True)
+  (3): Linear(in_features=256, out_features=256, bias=True)
+  (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+  (5): ReLU(inplace=True)
+  (6): Linear(in_features=256, out_features=10, bias=True)
+)
+cls_branch ModuleList(
+  (0): Sequential(
+    (0): Linear(in_features=256, out_features=256, bias=True)
+    (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (2): ReLU(inplace=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (5): ReLU(inplace=True)
+    (6): Linear(in_features=256, out_features=10, bias=True)
+  )
+  (1): Sequential(
+    (0): Linear(in_features=256, out_features=256, bias=True)
+    (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (2): ReLU(inplace=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (5): ReLU(inplace=True)
+    (6): Linear(in_features=256, out_features=10, bias=True)
+  )
+  (2): Sequential(
+    (0): Linear(in_features=256, out_features=256, bias=True)
+    (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (2): ReLU(inplace=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (5): ReLU(inplace=True)
+    (6): Linear(in_features=256, out_features=10, bias=True)
+  )
+  (3): Sequential(
+    (0): Linear(in_features=256, out_features=256, bias=True)
+    (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (2): ReLU(inplace=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (5): ReLU(inplace=True)
+    (6): Linear(in_features=256, out_features=10, bias=True)
+  )
+  (4): Sequential(
+    (0): Linear(in_features=256, out_features=256, bias=True)
+    (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (2): ReLU(inplace=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (5): ReLU(inplace=True)
+    (6): Linear(in_features=256, out_features=10, bias=True)
+  )
+  (5): Sequential(
+    (0): Linear(in_features=256, out_features=256, bias=True)
+    (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (2): ReLU(inplace=True)
+    (3): Linear(in_features=256, out_features=256, bias=True)
+    (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (5): ReLU(inplace=True)
+    (6): Linear(in_features=256, out_features=10, bias=True)
+  )
+)
+reg_branches ModuleList(
+  (0): RegLayer(
+    (reg_branch): Sequential(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.0, inplace=False)
+      (3): Linear(in_features=256, out_features=256, bias=True)
+      (4): ReLU()
+      (5): Dropout(p=0.0, inplace=False)
+    )
+    (task_heads): ModuleList(
+      (0): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=1, bias=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=3, bias=True)
+      )
+      (3): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (4): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+    )
+  )
+  (1): RegLayer(
+    (reg_branch): Sequential(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.0, inplace=False)
+      (3): Linear(in_features=256, out_features=256, bias=True)
+      (4): ReLU()
+      (5): Dropout(p=0.0, inplace=False)
+    )
+    (task_heads): ModuleList(
+      (0): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=1, bias=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=3, bias=True)
+      )
+      (3): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (4): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+    )
+  )
+  (2): RegLayer(
+    (reg_branch): Sequential(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.0, inplace=False)
+      (3): Linear(in_features=256, out_features=256, bias=True)
+      (4): ReLU()
+      (5): Dropout(p=0.0, inplace=False)
+    )
+    (task_heads): ModuleList(
+      (0): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=1, bias=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=3, bias=True)
+      )
+      (3): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (4): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+    )
+  )
+  (3): RegLayer(
+    (reg_branch): Sequential(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.0, inplace=False)
+      (3): Linear(in_features=256, out_features=256, bias=True)
+      (4): ReLU()
+      (5): Dropout(p=0.0, inplace=False)
+    )
+    (task_heads): ModuleList(
+      (0): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=1, bias=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=3, bias=True)
+      )
+      (3): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (4): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+    )
+  )
+  (4): RegLayer(
+    (reg_branch): Sequential(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.0, inplace=False)
+      (3): Linear(in_features=256, out_features=256, bias=True)
+      (4): ReLU()
+      (5): Dropout(p=0.0, inplace=False)
+    )
+    (task_heads): ModuleList(
+      (0): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=1, bias=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=3, bias=True)
+      )
+      (3): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (4): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+    )
+  )
+  (5): RegLayer(
+    (reg_branch): Sequential(
+      (0): Linear(in_features=256, out_features=256, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.0, inplace=False)
+      (3): Linear(in_features=256, out_features=256, bias=True)
+      (4): ReLU()
+      (5): Dropout(p=0.0, inplace=False)
+    )
+    (task_heads): ModuleList(
+      (0): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (1): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=1, bias=True)
+      )
+      (2): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=3, bias=True)
+      )
+      (3): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+      (4): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=2, bias=True)
+      )
+    )
+  )
+)
+
+
+POS SINE: pos_n.shape = torch.Size([1, 12, 20, 50, 128]) pos_x.shape = torch.Size([1, 12, 20, 50, 128]) pos_y.shape = torch.Size([1, 12, 20, 50, 128]), pos.shape = torch.Size([1, 12, 384, 20, 50])  mask.shape = torch.Size([1, 12, 20, 50])
+memory.shape = torch.Size([12000, 1, 256])
+pos_embed.shape = torch.Size([12000, 1, 256])
+query_embed.shape = torch.Size([900, 1, 256])
+mask.shape = torch.Size([1, 12000])
+target.shape = torch.Size([900, 1, 256])
+out_dec.shape = torch.Size([6, 900, 1, 256])
+out: out_dec.shape = torch.Size([6, 1, 900, 256]) memory.shape = torch.Size([1, 12, 256, 20, 50])
+outputs_class.shape = torch.Size([1, 900, 10])
+tmp.shape = torch.Size([1, 900, 10])
+outputs_class.shape = torch.Size([1, 900, 10])
+tmp.shape = torch.Size([1, 900, 10])
+outputs_class.shape = torch.Size([1, 900, 10])
+tmp.shape = torch.Size([1, 900, 10])
+outputs_class.shape = torch.Size([1, 900, 10])
+tmp.shape = torch.Size([1, 900, 10])
+outputs_class.shape = torch.Size([1, 900, 10])
+tmp.shape = torch.Size([1, 900, 10])
+outputs_class.shape = torch.Size([1, 900, 10])
+tmp.shape = torch.Size([1, 900, 10])
+all_cls_scores.shape = torch.Size([6, 1, 900, 10])
+all_bbox_preds.shape = torch.Size([6, 1, 900, 10])
+all_bbox_preds.shape = torch.Size([6, 1, 900, 10])
+NMS_FREE DECODE SINGLE bbox_preds torch.Size([300, 10])
+NMS_FREE DECODE SINGLE FINAL BOX PREDStorch.Size([300, 9])
+NMS_FREE DECODE SINGLE MASK torch.Size([300])
+NMS_FREE DECODE SINGLE boxes3d torch.Size([300, 9])

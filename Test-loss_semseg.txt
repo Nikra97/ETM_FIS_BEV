@@ -1,0 +1,32 @@
+false seg future 
+Test-loss_overall: 2.6151938438415527
+Test-loss_ce: 0.3128528892993927
+Test-loss_mask: 0.1938686966896057
+Test-liss_dice: 2.108474016189575
+
+future instance 
+Test-loss_overall: 3.3667409420013428
+Test-loss_ce: 0.6808043718338013
+Test-loss_mask: 0.15725892782211304
+Test-liss_dice: 2.5286781787872314
+
+
+segmentatioin 
+Test-loss_overall: 1.5288337469100952
+Test-loss_ce: 0.0
+Test-loss_mask: 0.3291829228401184
+Test-liss_dice: 1.1996488571166992
+
+instance segmen 
+Test-loss_overall: 3.7169787883758545
+Test-loss_ce: 1.7478883266448975
+Test-loss_mask: 0.24022363126277924
+Test-liss_dice: 1.728866457939148
+
+
+Future seg correct 
+
+Test-loss_overall: 1.7741585969924927
+Test-loss_ce: 0.0
+Test-loss_mask: 0.18356482684612274
+Test-liss_dice: 1.5905946493148804

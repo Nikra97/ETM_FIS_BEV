@@ -1,6 +1,7 @@
 # ETM_FIS_BEV
 
-For Master Thesis Efficient Temporal Modelling for Future Instance Prediction in Bird's Eye View, based on previous work from the authors of [BEVerse: Unified Perception and Prediction in Birds-Eye-View for Vision-Centric Autonomous Driving](http://arxiv.org/abs/2205.09743)
+For Master Thesis: "Efficient Temporal Modelling for Future Instance Prediction in Bird's Eye View", 
+based on previous work from the authors of [BEVerse: Unified Perception and Prediction in Birds-Eye-View for Vision-Centric Autonomous Driving](http://arxiv.org/abs/2205.09743)
 
 ## Installation
 

@@ -1,8 +1,6 @@
-# EMT_BEV
+# ETM_FIS_BEV
 
-For Master Thesis, Forked BEVerse Github and Description - all credit to the orgininal Authors: [BEVerse: Unified Perception and Prediction in Birds-Eye-View for Vision-Centric Autonomous Driving](https://arxiv.org/abs/2205.09743).
-
-[BEVerse Github](https://github.com/zhangyp15/BEVerse)
+For Master Thesis Efficient Temporal Modelling for Future Instance Prediction in Bird's Eye View, based on previous work from the authors of [BEVerse: Unified Perception and Prediction in Birds-Eye-View for Vision-Centric Autonomous Driving](http://arxiv.org/abs/2205.09743)
 
 ## Installation
 
@@ -18,7 +16,7 @@ Please check [getting_started](docs/getting_started.md) for training, evaluation
 
 ## Acknowledgement
 
-This project is mainly based on the following open-sourced projects: [open-mmlab](https://github.com/open-mmlab), [BEVDet](https://github.com/HuangJunJie2017/BEVDet), [HDMapNet](https://github.com/Tsinghua-MARS-Lab/HDMapNet), [Fiery](https://github.com/wayveai/fiery).
+This project is mainly based on the following open-sourced projects: [BEVerse](https://github.com/zhangyp15/BEVerse), [open-mmlab](https://github.com/open-mmlab), [BEVDet](https://github.com/HuangJunJie2017/BEVDet), [HDMapNet](https://github.com/Tsinghua-MARS-Lab/HDMapNet), [Fiery](https://github.com/wayveai/fiery).
 
 ## Bibtex
 
